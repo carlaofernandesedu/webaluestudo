@@ -57,9 +57,45 @@ FONTE que tem serifas que tem pontos nas fontes
 font-family: "Arial", "Open Sans";
 Ao inves de por o nome podemos colocar o tipo de fonte especificar para o navegador..
 sans-serif o navegados caaregra a fonte de acordo o tipo nao necessariamente pelo nome 
-
+rgb(255,255,255) valores dobrados #FFF  (h1)  
 COR ROXA 133 Vermelho 25 verde 68 azul = #851944 ou rgb(133,25,68) #FFFFFF rgb(255,255,255)
 valores dobrados #FFF 
 cor qause branca #F2FFFC para body 
 
-text-align:center #851944 #FFFFFF rgb(255,255,255) valores dobrados #FFF  (h1)  text-align:justify (p) 
+(h1) text-align:center #851944 #FFFFFF font-fmaily:Arial 
+(body) #F2FFFC
+(p)  text-align:justify font-family:Times New Roman 
+h1, h2 {
+    font-family: "Arial";
+}
+Arial e Verdana são fontes sem serifa - sans-serif 
+Times New Roman e Baskerville serifadas - serif 
+Quando não há nenhum estilo definido para o texto de uma página, esse texto é exibido seguindo os padrões definidos nas opções do navegador. O usuário do navegador tem o poder de modificar esse padrão nas opções do navegador para, por exemplo, usar uma fonte maior ou uma fonte que ele ache mais bonita.
+No caso do tamanho da fonte, precisamos usar a medida de porcentagem para definir seu valor. Isso porque, quando usamos porcentagem na propriedade font-size, ele usa como base para calcular a porcentagem o valor definido anteriormente. Então a melhor solução seria:
+
+A google disponibiliza a url https://fonts.google.com 
+disponibliza o arquivo e o css para baixar a fonte 
+Exemplo 
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+
+----------------------
+03 APROFUNDANDO NO HTML
+----------------------
+gerar links no nomes das empresas atraves de links UOL BMW e no item do blog <a href 
+link absolutos endereco completo ou link relativo = so a parte que quero mudar 
+troca o final blog.html ou 
+incluir no final /trilha/mobile  
+ou troca tudo //facebook a partir da http://
+Colocar a imagem - IMG src e alt (acessibilidade)
+W3C que descreve a imagem para poder enxergar - Foto de João da Silva 
+deixar HTML semantico a informação bem descrita - extrair bem essa informação ... 
+capaz do mecanismo de busca entender .. 
+
+
+
+
+
+
+
+
