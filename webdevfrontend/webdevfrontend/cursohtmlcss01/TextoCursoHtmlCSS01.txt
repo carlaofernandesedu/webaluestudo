@@ -92,7 +92,16 @@ W3C que descreve a imagem para poder enxergar - Foto de João da Silva
 deixar HTML semantico a informação bem descrita - extrair bem essa informação ... 
 capaz do mecanismo de busca entender .. 
 
-
+Listas de ul e li para colocar os links entender que é uma lista 
+lista de linhs para navegar no meu site 
+SEMANTICA para navegacao de links tags NAV agregar semantica 
+Conteudo principal da pagina do site pessoal 
+Destaque especial no conteudo principal dentro da TAG MAIN... 
+Agregar semantica entender que e o conteudo = acessibilidade usabilidae
+Colocar citaçõe essas referencias dentro do html 
+Quando citações para dar mais semantica usar BLOCKQUOTE 
+<p></p> e depois <cite></cite> 
+simbolo de copyright a entidades HTML & simbolo diversos &vopy;
 
 
 
