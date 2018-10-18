@@ -106,8 +106,34 @@ simbolo de copyright a entidades HTML & simbolo diversos &vopy;
 --------------------------------------
 POR DENTRO DO NAVEGADOR 
 --------------------------------------
+Usar o inspector para modificar itens na pagina e tambem clicar com enter para confirmar os valores das regras de CSS
 
+-------------------------------------
+MELHORANDO O LAYOUT 
+-------------------------------------
+espaçamentos - controla o espaçamento da caixa... trabalhando com CSS  padding: 20px  -  seletor blockquote 
+borda - colocar border border: 10px solid #c2ccca   (esses elementos para conseguir desenhar)
+solid dashed dotted diversas opcoes 
+Estreitar o tamaho da caixa  - width : 250px 
+Outros espaçamentos para controlar - Fora do elemento - margin entre os elementos fora dele 
+margin: 0px  fez com blockquote e h1 
 
+margin = BORDER = padding 
+
+Tem um calculo COMPUTED  == DESENHO BOX-MODEL == elementos dentro de BOX-MODEL 
+o conteudo esta com 250px de largura e nao tamanho inteiro... 
+pra definir esse comportamento para o navegador - BOX-SIZING = CONTENT-BOX POR PADRAO 
+a gente quer total  BORDER-BOX (com as bordas e padding)
+margin-left:auto margin-right:auto o navegador calcula o espaçamento 
+line-height o espaço entre as linhas do texto 
+cor transparent adota a cor de fundo do elemento 
+border-bottom-color 
+border-right-color 
+
+A propriedade margin controla o espaço entre elementos.
+A propriedade padding controla o espaço entre o conteúdo de um elemento e sua borda.
+As propriedades width e height controlam apenas o tamanho de um elemento, e não afetam o espaçamento entre esse elemento e seus vizinhos. Já a propriedade box-sizing controla apenas como a largura e a altura de um elemento deve ser calculada.
+Por fim, a propriedade line-height controla apenas a altura entre as linhas de texto da página, não afetando a distância entre elementos.
 
 
 
