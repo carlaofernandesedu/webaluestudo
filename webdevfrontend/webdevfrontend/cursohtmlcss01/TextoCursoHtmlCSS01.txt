@@ -103,6 +103,9 @@ Quando citações para dar mais semantica usar BLOCKQUOTE
 <p></p> e depois <cite></cite> 
 simbolo de copyright a entidades HTML & simbolo diversos &vopy;
 
+--------------------------------------
+POR DENTRO DO NAVEGADOR 
+--------------------------------------
 
 
 
