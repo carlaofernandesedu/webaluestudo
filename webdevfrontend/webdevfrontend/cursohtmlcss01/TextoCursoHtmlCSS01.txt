@@ -135,5 +135,19 @@ A propriedade padding controla o espaço entre o conteúdo de um elemento e sua 
 As propriedades width e height controlam apenas o tamanho de um elemento, e não afetam o espaçamento entre esse elemento e seus vizinhos. Já a propriedade box-sizing controla apenas como a largura e a altura de um elemento deve ser calculada.
 Por fim, a propriedade line-height controla apenas a altura entre as linhas de texto da página, não afetando a distância entre elementos.
 
+---------------
+BASE SOLIDA
+------------------
+funcionar a pagina em todos os navegadores a parte de estilos 
+base solida para poder trabalhar - css permite controlar aspectos visuais
+criar um arquivo base.css e depois um css que sobrescreve as regras 
+Dar muito trabalho avaliar todos os itens de espacamentos 
+Eric Meyer - navegador interpreta na ordem
+main h1 ele nao sobreescreveu... 
+main h1 é mais especifico dentro da tag que voce definir seletor mais especifico
+sempre use um reset
+Eric Meyer: arquivo bem pequeno; deixa todos os elementos com mesma aparência e tamanho de fonte; usa a fonte padrão do navegador
+Normalize: arquivo um pouco maior, mas com ajustes mais finos; já define fontes e tamanhos padrão para alguns elementos; corrige diversas inconsistências entre navegadores
+YUI (Yahoo!): arquivo bem pequeno, com um efeito bem parecido com o do Eric Meyer, mas com alguns ajustes mais específicos
 
 
