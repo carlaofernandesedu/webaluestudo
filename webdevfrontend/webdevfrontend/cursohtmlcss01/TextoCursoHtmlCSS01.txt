@@ -150,4 +150,24 @@ Eric Meyer: arquivo bem pequeno; deixa todos os elementos com mesma aparência e
 Normalize: arquivo um pouco maior, mas com ajustes mais finos; já define fontes e tamanhos padrão para alguns elementos; corrige diversas inconsistências entre navegadores
 YUI (Yahoo!): arquivo bem pequeno, com um efeito bem parecido com o do Eric Meyer, mas com alguns ajustes mais específicos
 
+-------------------------------
+POUQUINHO DE POSICIONAMENTO
+-------------------------------
+ciou a lista ul e li e estao em ordem vertical 
+as tags vao se empilhando 
+Nem toda tag empilha tem tags fica no meio do texto 
+Item visual - Controlar com o CSS 
+propriedade - DISPLAY - BLOCK - Empilhar com o resto do texto OU INLINE - um ao lado do outro em forma de texto
+Altura correspondente a minha fonte ... 
+funciona width height - inline-block
+OBSERVAR quando precisarmos trabalhar colocar dois elementos que tenha o mesmo tamanho lado a lado precisaremos trabalhar com display:inline-block
+Exemplo: imagem e menu de navegacao ficar com a mesma altura 
 
+	display:block; ocupar o espaço inteiro empurrado os outros elementos 
+    para baixo
+
+--------------------------------
+MAIS SELETORES 
+--------------------------------
+usar o atributo ID = identificador do elemento da pagina  colocar o caracter selecionando por id.  #seletor  nao e legal de repetir
+No item ul atributo class - selecionar por classe .seletor seleciona por classe 

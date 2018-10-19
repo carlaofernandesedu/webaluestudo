@@ -36,7 +36,7 @@ aside {
 	color: #F2FFFC;
 }
 
-footer {
+#rodapeblog {
 	background-color: #000;
 	color: #F2FFFC;
 }
@@ -83,4 +83,30 @@ em {
 
 h2 {
 	font-size: 30px;
+}
+
+/* aside li {
+	display: inline-block;
+} */
+
+.redessociais li{
+	display: inline-block;
+}
+
+article
+{
+	margin-bottom: 20px
+}
+
+hr{
+	color:#CCC;
+}
+
+.lermais{
+	background-color:yellow;
+	text-align: center;
+	display:block;
+	font-size:24px;
+	margin: 16px;
+	padding:8px;
 }
