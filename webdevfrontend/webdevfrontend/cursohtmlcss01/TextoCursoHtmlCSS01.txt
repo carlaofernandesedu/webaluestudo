@@ -171,3 +171,21 @@ MAIS SELETORES
 --------------------------------
 usar o atributo ID = identificador do elemento da pagina  colocar o caracter selecionando por id.  #seletor  nao e legal de repetir
 No item ul atributo class - selecionar por classe .seletor seleciona por classe 
+
+-------------------------------
+TRANSCRICAO 
+-------------------------------
+text-transform: uppercase parar tranformar caracteres para maiuscula 
+plugin CHROME VOX para deficiencia visual - PROCEDIMENTOS tomar cuidado com o leitor visuais e palavras maiusculas 
+colocar as imagens para CSS - as imagens de fundo neles para semantica passar o nome da empresa ao inves de uma image representando a empresa 
+background-image: url() 
+acertar o tamanho da imagem  e tem que acertar o display:inline-block
+Conseguir o truque para esconder o texto text-ident: -9999px  o texto desaparece... e deixa somente a imagem - IMAGE REPLACEMENT TECNICA -
+Essa imagens não indexarão as imagens referenciadas no CSS. 
+Isso pode ser ou não interessante. Se usamos corretamente a técnica image replacement, apenas imagens secundárias, supérfluas para o conteúdo
+
+text-ident navegador faze calculo - dependendo da lingua acessar incorretamente
+
+Por outro lado, usar o font-size com valor zero não é bem interpretado por todos os navegadores. 
+Alguns simplesmente ignoram uma declaração desse tipo; outros, mesmo com o tamanho zerado, mostram o texto numa fonte pequena. 
+Ou seja, há um problema de compatibilidade com essa técnica, que a propriedade text-indent não tem.
