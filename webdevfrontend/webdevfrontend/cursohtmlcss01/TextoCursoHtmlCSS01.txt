@@ -189,3 +189,24 @@ text-ident navegador faze calculo - dependendo da lingua acessar incorretamente
 Por outro lado, usar o font-size com valor zero não é bem interpretado por todos os navegadores. 
 Alguns simplesmente ignoram uma declaração desse tipo; outros, mesmo com o tamanho zerado, mostram o texto numa fonte pequena. 
 Ou seja, há um problema de compatibilidade com essa técnica, que a propriedade text-indent não tem.
+
+---------------------------------------------
+elementos de posicionamento - 
+----------------------------------------------
+position: relative; relativo a posicao original
+mantem o fluxo da pagina .. para o resto da pagina ainda mantem elemento no original   
+top: 10px right: 50px 
+
+Para sair do fluxo 
+position: absolute; relativo a janela do navegador  
+top: 0px  
+right: 0px
+
+Valor fixed do position 
+ele continua com a relacao a tela nao importa meu scrool 
+largura tem que definir sempre visivel..
+
+
+
+
+
