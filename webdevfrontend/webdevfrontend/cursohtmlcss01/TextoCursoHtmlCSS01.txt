@@ -189,3 +189,26 @@ text-ident navegador faze calculo - dependendo da lingua acessar incorretamente
 Por outro lado, usar o font-size com valor zero não é bem interpretado por todos os navegadores. 
 Alguns simplesmente ignoram uma declaração desse tipo; outros, mesmo com o tamanho zerado, mostram o texto numa fonte pequena. 
 Ou seja, há um problema de compatibilidade com essa técnica, que a propriedade text-indent não tem.
+
+------------------------------------------
+POSICIONAMENTO MAIS A FUNDO 
+-----------------------------------------
+tag uma em cima da outra comportamento padrao de empilhar... 
+tirando a coisas do fluxo .... da pagina ... na ordem que digitou esta aparecendo 
+propriedade - elemento fluxo ---- 
+propriedade -float no blockquote a direita e a esquerda 
+tem outra propriedade -- 
+Clear = no elemento nao deve outros elementos que trabalhem com float dessa formma voce pode empurrar os outros elementos 
+para isso posso usar clear:both:
+
+Trabalhou com os float para cada um dos blockquote uma para cada lado .... 
+
+Iremos trabalhar com a barra de navegacao ==== 
+aside: float right -- por enquanto ele fica no mesmo ponto na mesma altura que ele aparecia antes .... 
+Colocar a imagem no ponto direitor aside img float right ...  ficaram na 
+aside clear right a imagem fica acima do item.. 
+
+Um nome que tem esse tratamento clear-fix =  clear:both...
+
+aplicou um float:right dentro do blockquote para o elemento CITE..
+para posicionar 

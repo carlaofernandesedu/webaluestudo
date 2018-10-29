@@ -32,15 +32,47 @@ p {
 	margin: 20px 40px;
 }
 
+.clearfix 
+{
+	clear: both;
+}
+
+.citacao-fiat
+{
+ float:left;
+}
+
+.citacao-petrobras
+{
+	float:right;
+}
+
+cite{
+	float: right;
+	font-style: italic;
+}
+
 .navegacao-site {
 	text-align: center;
 	background-color: #3C1D3D;
 	color: #F2FFFC;
+	float:right;
+	width:15%;
+	box-sizing:border-box;
+	border-left: 10px solid black;
+	border-bottom: 10px solid black;
 }
+
 
 .rodape-pagina {
 	background-color: #000;
 	color: #F2FFFC;
+	clear:both;
+}
+
+main{
+	float:left;
+	width: 85%;
 }
 
 main a {
@@ -120,3 +152,13 @@ nav a {
 .linkedin {
 	background-image: url(linkedin.png);
 }
+
+.minha-foto{
+	float:right;
+	width:15%;
+	box-sizing:border-box;
+	border-left: 10px solid black;
+	border-bottom: 10px solid black;
+
+}
+
