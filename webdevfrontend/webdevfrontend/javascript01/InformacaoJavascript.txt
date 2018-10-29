@@ -1,0 +1,28 @@
+DOUGLAS QUINTANILHA - 
+------------------------------
+MOTIVO DE JAVASCRIPT
+------------------------------
+linguagem nativa da web
+usuário interagir com a página 
+melhorar a usabilidade 
+
+Lado do servicor - NODE.JS - um ambiente servidor Web Completo utilizando Javascript 
+Programar no Arduino com biblioteca Johnny-Five  - Placa para a parte Robotica - 
+Desktop framewrok Electron  - Editor Html CSS e JAavascript 
+Banco de Dados - Mongo DB 
+Plataforma internet das Coisas
+
+
+Ao inves de usar Ola Mundo pode usar o console.log.. para acessar a console do Navegador use a tecla "F12"
+MacOS COMMAND+ALT+J 
+Unexpected Identifier - erro de interpretacao de javascript - 
+
+document e querySelector("") e textContent (acessar conteudo dentro do elemento)
+
+BOA PRATICA 
+Nao acessar a tag direto e sim utilizar outros meios . Por meio de seletores CSS -  classe ou id do elemento 
+Arquivos diferentes . com diferentes extensoes 
+pasta js  criar o arquivo principal.js 
+<script src="js/principal.js"></script> e colocar no final do script
+DOM - Documento Object Model - 
+
