@@ -212,3 +212,19 @@ Um nome que tem esse tratamento clear-fix =  clear:both...
 
 aplicou um float:right dentro do blockquote para o elemento CITE..
 para posicionar 
+
+---------------------------------------------
+elementos de posicionamento - 
+----------------------------------------------
+position: relative; relativo a posicao original
+mantem o fluxo da pagina .. para o resto da pagina ainda mantem elemento no original   
+top: 10px right: 50px 
+
+Para sair do fluxo 
+position: absolute; relativo a janela do navegador  
+top: 0px  
+right: 0px
+
+Valor fixed do position 
+ele continua com a relacao a tela nao importa meu scrool 
+largura tem que definir sempre visivel..
