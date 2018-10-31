@@ -26,3 +26,10 @@ pasta js  criar o arquivo principal.js
 <script src="js/principal.js"></script> e colocar no final do script
 DOM - Documento Object Model - 
 
+Array Classes e ESTILO 
+-----------------------------------------------------
+querySelectorAll  retornar varios registros 
+<elemento>.classList = 
+style.backColor ="true" aplicando estilos 
+titulo.classList.add("titulo"); adiciona a classe css ao elemento 
+----------------------------------------------------
