@@ -26,3 +26,5 @@ pasta js  criar o arquivo principal.js
 <script src="js/principal.js"></script> e colocar no final do script
 DOM - Documento Object Model - 
 
+-----------------------------------------
+OPERADORES LOGICOS E IFS && e || 
