@@ -28,3 +28,10 @@ DOM - Documento Object Model -
 
 -----------------------------------------
 OPERADORES LOGICOS E IFS && e || 
+Array Classes e ESTILO 
+-----------------------------------------------------
+querySelectorAll  retornar varios registros 
+<elemento>.classList = 
+style.backColor ="true" aplicando estilos 
+titulo.classList.add("titulo"); adiciona a classe css ao elemento 
+----------------------------------------------------
