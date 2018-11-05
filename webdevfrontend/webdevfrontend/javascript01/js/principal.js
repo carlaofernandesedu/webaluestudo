@@ -1,34 +1,3 @@
-var botaoAdicionario = document.querySelector("#adicionar-paciente");
-botaoAdicionario.addEventListener("click", function(event){
-    event.preventDefault();
-    console.log("fui clicado");
-    var formulario = document.querySelector("#form-adiciona");
-    var nome = formulario.nome.value;
-    var peso = formulario.peso.value;
-    var altura= formulario.altura.value;
-    var gordura = formulario.gordura.value;
-
-    tdNome = document.createElement("td");
-    tdPeso = document.createElement("td");
-    tdAltura = document.createElement("td");
-    tdGordura = document.createElement("td");
-
-    tdNome.textContent = nome;
-    tdPeso.textContent = peso;
-    tdAltura.textContent = altura;
-    tdGordura.textContent = gordura;
-
-    var pacienteTr = document.createElement("tr");
-    pacienteTr.appendChild(tdNome);
-    pacienteTr.appendChild(tdPeso);
-    pacienteTr.appendChild(tdAltura);
-    pacienteTr.appendChild(tdGordura);
-
-    document.querySelector("#tabela-pacientes").appendChild(pacienteTr);
-
-});
-
-
 var titulo = document.querySelector(".titulo");
 titulo.textContent = "Aparecida Nutricionista";
 
@@ -68,3 +37,38 @@ for (var i = 0; i < pacientes.length; i++) {
         tdImc.textContent = imc.toFixed(2);
     }
 }
+
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var form = document.querySelector("#form-adiciona");
+
+    var nome = form.nome.value;
+    var peso = form.peso.value;
+    var altura = form.altura.value;
+    var gordura = form.gordura.value;
+
+    var pacienteTr = document.createElement("tr");
+
+    var nomeTd = document.createElement("td");
+    var pesoTd = document.createElement("td");
+    var alturaTd = document.createElement("td");
+    var gorduraTd = document.createElement("td");
+    var imcTd = document.createElement("td");
+
+    nomeTd.textContent = nome;
+    pesoTd.textContent = peso;
+    alturaTd.textContent = altura;
+    gorduraTd.textContent = gordura;
+
+    pacienteTr.appendChild(nomeTd);
+    pacienteTr.appendChild(pesoTd);
+    pacienteTr.appendChild(alturaTd);
+    pacienteTr.appendChild(gorduraTd);
+
+    var tabela = document.querySelector("#tabela-pacientes");
+
+    tabela.appendChild(pacienteTr);
+
+});
