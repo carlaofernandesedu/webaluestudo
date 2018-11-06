@@ -35,3 +35,25 @@ querySelectorAll  retornar varios registros
 style.backColor ="true" aplicando estilos 
 titulo.classList.add("titulo"); adiciona a classe css ao elemento 
 ----------------------------------------------------
+
+REMOVER O ELEMENTO DONO DO EVENTO 
+addEventListener("dblclick", function(){
+    this.remove(); 
+});
+
+Event Bubbling ou borbulhamento == 
+Pode colocar ouvir o evento no elemento pai 
+para descobrir quem clicou pode usar o item event.target => ALVO
+
+
+.fadeOut {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+implementar a classe para esconder o item a partir de um intervalo 
+ event.target.parentNode.classList.add("fadeOut");
+
+    setTimeout(function() {
+        event.target.parentNode.remove();
+    }, 500);
