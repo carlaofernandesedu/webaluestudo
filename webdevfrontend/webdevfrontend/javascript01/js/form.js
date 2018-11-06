@@ -6,6 +6,14 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     var paciente = obtemPacienteDoFormulario(form);
 
+    var erros = validarPaciente(paciente);
+
+    if (erros.length > 0)
+    {
+        mostrarMensagensErros(erros);
+        return;
+    } 
+
     var pacienteTr = montaTr(paciente);
 
     var tabela = document.querySelector("#tabela-pacientes");
@@ -26,6 +34,29 @@ function obtemPacienteDoFormulario(form) {
     }
 
     return paciente;
+}
+
+function validarPaciente(paciente)
+{
+    var erros = [];
+    if(paciente.nome.length == 0) erros.push("Informe o nome do paciente!"); 
+    if(paciente.peso.length == 0) erros.push("Informe o peso do paciente!");
+    if(paciente.altura.length == 0) erros.push("Informe o altura do paciente!");
+    if(paciente.gordura.length == 0) erros.push("Informe o gordura do paciente!");
+    if(!validarPeso(paciente.peso)) erros.push("Peso invalido");
+    if(!validarAltura(paciente.altura)) erros.push("Altura invalida");
+    return erros;
+}
+
+function mostrarMensagensErros(erros)
+{
+    var mensagens = document.querySelector("#mensagens-erro");
+    mensagens.innerHTML = "";
+    erros.forEach(function(item){
+        var mensagem = document.createElement("li");
+        mensagem.textContent = item;
+        mensagens.appendChild(mensagem);
+    });
 }
 
 function montaTr(paciente) {
