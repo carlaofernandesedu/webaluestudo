@@ -76,3 +76,22 @@ Podemos utilizar a função substr, que recebe dois parâmetros, fazendo com que
 var comparavelMinusculo = comparavel.toLowerCase();
 var valorDigitadoMinusculo = this.value.toLowerCase();
 
+
+Não sabemos de onde vêm os dados, como e de que maneira eles foram gerados, pois eles se encontram disponibilizados e prontos para uso, sendo esta uma característica de uma API.
+
+O XMLHttpRequest é um objeto do JS responsável por fazer requisições HTTP
+var xhr = new XMLHttpRequest();
+ xhr.open("GET", "https://api-pacientes.herokuapp.com/pacientes");
+ xhr.addEventListener("load", function(){
+    });
+    xhr.send();
+
+Devolve pelo xhr.responseText
+m parseador de JSON para objetos do JavaScript. Para realizarmos esta tarefa usaremos o método parse(). 
+Assim, receberemos o texto em JSON, que depois será parseado. Em seguida, será retornado um objeto JavaScript. 
+Como nossa resposta se parece com um objeto, o método entenderá isso e nos retornará um array do objetos:
+JSON.parse(resposta);
+Verificar retorno 
+if (xhr.status == 200) {
+console.log(xhr.status);
+console.log(xhr.responseText);

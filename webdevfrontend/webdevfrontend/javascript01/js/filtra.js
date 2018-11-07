@@ -1,30 +1,25 @@
-var filtro = document.querySelector("#filtrar-tabela");
-filtro.addEventListener("input", function(){
-    var visivel = true;
-    if (this.value.length > 0)
-    {
-        console.log("informou algo");
-        var pacientes = document.querySelectorAll(".paciente")
-        var expressao = new RegExp(this.value,"i");
-        for(var i = 0; i < pacientes.length; i++)
-        {
-           var paciente = pacientes[i];
-           var nome = paciente.querySelector(".info-nome").textContent;
-           var visivel = expressao.test(nome);
-           controlarVisibilidadePaciente(paciente, visivel)  
+var campoFiltro = document.querySelector("#filtrar-tabela");
+
+campoFiltro.addEventListener("input", function() {
+    var pacientes = document.querySelectorAll(".paciente");
+
+    if (this.value.length > 0) {
+        for (var i = 0; i < pacientes.length; i++) {
+            var paciente = pacientes[i];
+            var tdNome = paciente.querySelector(".info-nome");
+            var nome = tdNome.textContent;
+            var expressao = new RegExp(this.value, "i");
+
+            if (!expressao.test(nome)) {
+                paciente.classList.add("invisivel");
+            } else {
+                paciente.classList.remove("invisivel");
+            }
+        }
+    } else {
+        for (var i = 0; i < pacientes.length; i++) {
+            var paciente = pacientes[i];
+            paciente.classList.remove("invisivel");
         }
     }
-    else 
-    {
-        document.querySelectorAll(".paciente").forEach(function(paciente){ controlarVisibilidadePaciente(paciente,visivel) });
-    }
 });
-
-function controlarVisibilidadePaciente(paciente, visivel)
-{
-    if (visivel)
-        paciente.classList.remove("invisivel");
-    else 
-        paciente.classList.add("invisivel");
-}
-
