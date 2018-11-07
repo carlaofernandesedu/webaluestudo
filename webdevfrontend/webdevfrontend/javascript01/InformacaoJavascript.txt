@@ -57,3 +57,22 @@ implementar a classe para esconder o item a partir de um intervalo
     setTimeout(function() {
         event.target.parentNode.remove();
     }, 500);
+
+
+As expressões regulares são um tipo especial de texto, que nos auxilia a buscarmos por strings, facilitando quando o termo for maior
+var expressao = new RegExp();
+Nós poderemos passar dois parâmetros para o objeto, sendo o primeiro o texto que queremos buscar, no caso, o termo digitado no campo de busca (this.value), 
+e o segundo parâmetro será referente às características dos termos que devem ser buscados. É importante que a busca não seja case sensitive, 
+que é a diferenciação entre letras maiúsculas e minúsculas. 
+Devem ser buscadas tanto letras maiúsculas como minúsculas, e passaremos a letra "i" 
+var expressao = new RegExp(this.value, "i");
+var expressao = new RegExp(this.value, "i"); if (expressao.test(nome))
+
+Podemos utilizar a função substr, que recebe dois parâmetros, 
+fazendo com que ela devolva parte da string, com o tamanho definido nos parâmetros. 
+O primeiro parâmetro é o início, começando do 0 (que representa o primeiro caractere). O segundo parâmetro define o fim (exclusivo, mostramos até o penúltimo caractere)
+
+Podemos utilizar a função substr, que recebe dois parâmetros, fazendo com que ela devolva parte da string, com o tamanho definido nos parâmetros. O primeiro parâmetro é o início, começando do 0 (que representa o primeiro caractere). O segundo parâmetro define o fim (exclusivo, mostramos até o penúltimo caractere)
+var comparavelMinusculo = comparavel.toLowerCase();
+var valorDigitadoMinusculo = this.value.toLowerCase();
+
