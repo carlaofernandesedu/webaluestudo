@@ -1,0 +1,25 @@
+Estruture meu jquery no projeto 
+interatividade - javascript -> 
+jquery -- tratar diversos navegadores diferencas .. suporte a varios navegadores 
+navegadores mobile  muito trabalho 
+reduzir a codificacao -- 
+funcionamento para IE a partir do 9 como jquery 3 
+Tradutor  para funcionar na maioria deles ... 
+Escreva menos e faça mais produtividade a faça mais 
+var paragrafos = document.querySelectorAll('p');
+for( var i = 0;i < paragrafos.length; i++){
+    paragrafos[i].textContent = "novo texto";
+}
+no jquery 
+$('p').text('novo texto');
+ie 9 e para outros navegadores para frente ... as duas ultimas versoes 
+
+aula 2 
+$().on()
+regular expression ao inves de " " por ter mais de uma espaço em branco uso 
+o regular expression 
+conteudo.split(/\S+/).length
+oninput 
+Esse evento é disparado quando o campo <input> ou <textarea> recebe uma entrada de texto qualquer.
+
+
