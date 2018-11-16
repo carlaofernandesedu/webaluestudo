@@ -22,4 +22,27 @@ conteudo.split(/\S+/).length
 oninput 
 Esse evento é disparado quando o campo <input> ou <textarea> recebe uma entrada de texto qualquer.
 
+//Retira os espaço da String 
+    var conteudoSemEspaco = conteudo.replace(/\s+/g,'');
 
+aula3 
+setInterval(function() {
+campo.attr("disabled", true);
+Para isso, existe a função clearInterval, que recebe o id do setInterval como 
+Mas atualmente, não temos acesso a essa id da função setInterval(), como consegui-lo? Toda função setInterval() retorna o seu próprio id, logo, basta guardarmos esse id em uma variável e passá-lo para a função clearInterval:
+campo.one("focus", function() {
+    var cronometroID = setInterval(function() {
+        tempoRestante--;
+        $("#tempo-digitacao").text(tempoRestante);
+        if (tempoRestante < 1) {
+            campo.attr("disabled", true);
+            clearInterval(cronometroID);
+        }
+    }, 1000);
+    O evento de focus do jQuery
+Como implementar um cronômetro de tempo
+Relembrando as funções de tempo do javascript: setInterval e clearInterval
+Manipulando atributos com a função .attr() do jQuery
+Escutando eventos com a função .one() do jQuery
+Errada, para selecionar um elemento pela tag através da função seletora do jQuery , devemos passar apenas o nome da tag, não a tag em si. 
+Neste caso, deveríamos selecionar assim $("textarea").
