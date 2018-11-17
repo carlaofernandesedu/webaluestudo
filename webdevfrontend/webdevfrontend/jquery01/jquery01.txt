@@ -46,3 +46,39 @@ Manipulando atributos com a função .attr() do jQuery
 Escutando eventos com a função .one() do jQuery
 Errada, para selecionar um elemento pela tag através da função seletora do jQuery , devemos passar apenas o nome da tag, não a tag em si. 
 Neste caso, deveríamos selecionar assim $("textarea").
+
+aula 04 
+Os eventos do Javascript que são mais comuns, como o click, blur(evento de sair de um campo), dblclick (clique duplo) tem funções próprias no jQuery, que são funções de atalho, evitando precisar chamar a função on() e chamando diretamente a função do próprio evento.
+$(document).ready():
+$(document).ready(function(){
+    atualizaTamanhoFrase();
+    inicializaContadores();
+    inicializaCronometro(); 
+    $("#botao-reiniciar").click(reiniciaJogo);
+});
+
+$(function(){
+    atualizaTamanhoFrase();
+    inicializaContadores();
+    inicializaCronometro();
+    $("#botao-reiniciar").click(reiniciaJogo);
+});
+
+var tempoInicial = $("#tempo-digitacao").text();
+var campo = $(".campo-digitacao");
+
+$(function(){
+    atualizaTamanhoFrase();
+    inicializaContadores();
+    inicializaCronometro();
+    $("#botao-reiniciar").click(reiniciaJogo);
+});
+
+function atualizaTamanhoFrase(){
+    var frase = $(".frase").text();
+    var numPalavras  = frase.split(" ").length;
+    var tamanhoFrase = $("#tamanho-frase");
+    tamanhoFrase.text(numPalavras);
+}
+Remover o atributo ao inves de setar como false 
+$(".post").removeAttr("disabled"); no lugar de attr("disabled",false)
