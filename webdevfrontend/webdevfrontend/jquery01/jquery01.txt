@@ -82,3 +82,50 @@ function atualizaTamanhoFrase(){
 }
 Remover o atributo ao inves de setar como false 
 $(".post").removeAttr("disabled"); no lugar de attr("disabled",false)
+
+AULA 5 
+Colocar materialize framework para tratamento de estilizacao no processo 
+campo.css("background-color", "lightgray")
+campo.addClass("campo-desativado");
+Assim como o jQuery possui a função addClass, ele também possui a removeClass, 
+
+
+<link rel="stylesheet" href="css/libs/materialize.min.css">
+<link rel="stylesheet" href="css/libs/google-fonts.css">
+<link rel="stylesheet" href="css/estilos.css">
+tag <i> com as classes small (referente ao tamanho do ícone, há também os tamanhos tiny, medium e large) e material-icons. Dentro da tag nós colocamos o nome do ícone que queremos (a lista se encontra no site). Os ícones que utilizaremos 
+para o contador do tamanho da frase e para o cronômetro são o description e query_builder,
+
+Essa ação de adicionar e remover classes se tornou uma tarefa tão comum, 
+que o jQuery criou uma função específica para isso, a toggleClass()
+sempre adiciona excepcionalmente se quiser usar o segundo parametro
+campo.toggleClass("campo-desativado", true)
+
+<i class="small material-icons icones">description</i>
+<a class="btn-floating btn-large waves-effect waves-light red">
+    <i class="material-icons">add</i>
+</a>
+
+var comparavel = frase.substr(0 , digitado.length);
+o CSS para formatar conteúdos estruturados.
+
+CSS é uma linguagem para estilos que define o layout de documentos HTML. Por exemplo, CSS controla fontes, cores, margens, linhas, alturas, larguras, imagens de fundo, posicionamentos e muito mais.
+
+Tratar css 
+var valores = $("div").css(["background-color","width"]);
+valores.width 
+var valores = $("div").css("background-color");
+var ehCorreto = (digitado == comparavel);
+
+campo.toggleClass("borda-verde", ehCorreto);
+campo.toggleClass("borda-vermelha", !ehCorreto);
+
+https://materializecss.com/icons.html
+
+DICAS ES6 
+var digitouCorreto = frase.startsWith(digitado);
+
+http://materializecss.com/
+
+O Materialize foi criado pela Google e segue o Material Design que é uma linguagem de design desenvolvida pela Google. 
+Material Design é utilizado em vários produtos do Google e também é aplicado nos aplicativos Android.
