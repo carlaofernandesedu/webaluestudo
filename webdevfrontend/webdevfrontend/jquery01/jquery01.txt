@@ -129,3 +129,32 @@ http://materializecss.com/
 
 O Materialize foi criado pela Google e segue o Material Design que é uma linguagem de design desenvolvida pela Google. 
 Material Design é utilizado em vários produtos do Google e também é aplicado nos aplicativos Android.
+
+Aula 06 
+var corpoTabela = $(".placar").find("tbody");
+Se quisermos adicionar a nova linha como primeiro item da tabela, devemos utilizar 
+uma função que é prima da função .append(), que é a .prepend(). 
+
+var linha = $("<tr>");  Criar elemento 
+
+var linha = $("<tr>");
+    var colunaUsuario = $("<td>").text(usuario);
+    var colunaPalavras = $("<td>").text(palavras);
+    var colunaRemover = $("<td>");
+
+    var link = $("<a>").attr("href","#").addClass("botao-remover");
+    var icone = $("<i>").addClass("small").addClass("material-icons").text("delete");
+
+    // Icone dentro do <a>
+    link.append(icone);
+
+    // <a> dentro do <td>
+    colunaRemover.append(link);
+
+    // Os três <td> dentro do <tr>
+    linha.append(colunaUsuario);
+    linha.append(colunaPalavras);
+    linha.append(colunaRemover);
+
+    O código $("h1").parent(".segunda"); seleciona todos os h1s da página, 
+    e busca em cada um deles por um pai com a classe segunda. Neste caso, retornando apenas a div inferior.

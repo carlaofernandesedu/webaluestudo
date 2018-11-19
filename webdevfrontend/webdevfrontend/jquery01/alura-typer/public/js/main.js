@@ -23,6 +23,11 @@ function unbindBotaoReiniciar()
     $("#botao-reiniciar").off("click");
 }
 
+function bindBotaoRemoverItemPlacar(item)
+{
+    item.find(".botao-remover").click(removeItemDoPlacar);
+}
+
 function atualizaContadoresEBordas()
 {
     atualizaContadoresCampoDigitado();
@@ -89,10 +94,8 @@ function inicializaConometro() {
         if (tempoRestante < 1)
         {
             clearInterval(cronometroID);
-            $(".campo-digitacao").attr("disabled",true);
-            //$("#botao-reiniciar").attr("disabled",false);
-            bindBotaoReiniciar();
-            $(".campo-digitacao").toggleClass("campo-desabilitado");
+            finalizaJogo();
+    
         }
     }, intervaloExecucao);
 }
@@ -112,6 +115,49 @@ function reiniciaJogo()
     $("#tempo-digitacao").text(tempoInicial);
     
     bindCampoDigitacaoCronometro();
+}
+
+function finalizaJogo()
+{
+    $(".campo-digitacao").attr("disabled",true);
+    //$("#botao-reiniciar").attr("disabled",false);
+    bindBotaoReiniciar();
+    $(".campo-digitacao").toggleClass("campo-desabilitado");
+    insereNoPlacar();
+}
+
+function criaItemNoPlacar(usuario,numeroPalavras) 
+{
+    var colunaUsuario =$("<td>").text(usuario);
+    var colunaPalavras =$("<td>").text(numeroPalavras);
+    var colunaRemover = $("<td>");
+    var linkRemover = $("<a>").addClass("botao-remover").attr("href","#")
+    var iconeRemover = $("<i>").addClass("icones").addClass("small").addClass("material-icons").text("delete");
+    
+    var linhaTabela = $("<tr>");
+    linhaTabela.append(colunaUsuario);
+    linhaTabela.append(colunaPalavras);
+    linkRemover.append(iconeRemover);
+    colunaRemover.append(linkRemover);
+    linhaTabela.append(colunaRemover);
+    return linhaTabela;
+}
+
+function insereNoPlacar()
+{
+  var placar = $(".placar");
+  var usuario = "Carlos";
+  var numeroPalavras = $("#contador-palavras").text();
+  var corpoTabela = placar.find("tbody");
+  var novaLinha = criaItemNoPlacar(usuario, numeroPalavras);
+  bindBotaoRemoverItemPlacar(novaLinha);
+  corpoTabela.append(novaLinha);
+}
+
+function removeItemDoPlacar()
+{
+    event.preventDefault();
+    $(this).parent().parent().remove();
 }
 
 $(document).ready(function(){
