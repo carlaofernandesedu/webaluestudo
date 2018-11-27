@@ -1,0 +1,39 @@
+$(".placar").show(); //display block  
+$(".placar").hide();//display none
+$(".placar").toggle mostar ou esconde dependendo da situacao 
+semelhante a classe toggleClass
+
+para deixar ja com scroll
+body {
+    overflow: scroll;
+}
+
+transicao mais devagar para aparecer 
+body {
+    overflow: scroll;
+}
+function mostraPlacar() {
+    $(".placar").slideDown(600);
+}
+
+$(".placar").slideToggle(600);
+Como exibir um elemento com a função show e ocultá-lo com a função hide.
+Como alternar entre as funções show e hide com a função toggle.
+Como exibir e ocultar um elemento de uma maneira mais suave, com as funções slideDown e slideUp, respectivamente.
+Como alternar entre as funções slideDown e slideUp com a função slideToggle.
+
+Esmaecendo ao inves de sumir de vez 
+$(this).parent().parent().fadeOut();
+linha.fadeOut();
+linha.remove();
+linha.fadeOut(1000);
+    setTimeout(function() {
+        linha.remove();
+    }, 1000);
+}
+semelhantes que executam o fade, o fadeIn, fadeOut e fadeToggle, respectivamente.
+
+para a animacao e evitar inumera animacoes para o usuario
+$(".placar").stop().slideToggle(600);
+
+
