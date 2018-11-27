@@ -36,4 +36,45 @@ semelhantes que executam o fade, o fadeIn, fadeOut e fadeToggle, respectivamente
 para a animacao e evitar inumera animacoes para o usuario
 $(".placar").stop().slideToggle(600);
 
+function scrollPlacar() {
+    var posicaoPlacar = $(".placar").offset().top;
+}
 
+
+
+function scrollPlacar() {
+    var posicaoPlacar = $(".placar").offset().top;
+
+    $("body").animate(
+    {
+        scrollTop: posicaoPlacar + "px"
+    }, 1000);
+}
+
+Esta correta! o jQuery possui a função hasClass que retorna true se um elemento possui ou não uma classe. Na condição, removemos a classe invisivel caso o elemento já a tenha e a adicionamos caso ele não a tenha. Todo esse processo é feito a cada clique do usuário.
+ if(promocoes.hasClass('invisivel')) {
+
+    promocoes.removeClass('invisivel');
+  } else {
+    promocoes.addClass('invisivel');
+  }
+
+  var promocoes = $('.promocoes');
+  if(promocoes.is(':visible')) {
+
+    promocoes.hide();
+  } else {
+    promocoes.show();
+  }
+  elemento esta com display diferente de none ele ganha a pseudo classe :visible . A função is retorna true caso o elemento esteja visível
+
+
+  Para evitar de ter que fazer duas vezes $(this) Luciano decidiu guardar o this promovido para jQuery Object na variável $this. O prefixo $ deixa claro para ela que é um jQuery Object e não um this ordinário.
+
+
+Para que a remoção seja feito só depois do efeito de fadeOut ter terminado, ela passou uma função para a função fadeOut. Essa função é chamada só quando fadeOut termina. Sendo assim, na função ela pôde chamar $this.remove() com a certeza que o efeito de fadeOut já foi processado.
+ var $this = $(this);
+
+    $this.fadeOut(function() {
+        $this.remove();
+    })
