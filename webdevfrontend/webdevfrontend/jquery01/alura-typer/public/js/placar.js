@@ -20,17 +20,19 @@ function inserePlacar() {
     var linha = novaLinha(usuario, numPalavras);
     linha.find(".botao-remover").click(removeLinha);
     corpoTabela.append(linha);
-    $(".placar").stop().slideToggle(600);
+    $(".placar").slideToggle(600);
     scrollPlacar();
 }
 
 function scrollPlacar()
 {
     var posicaoPlacar = $(".placar").offset().top;
-    posicaoPlacar = posicaoPlacar + 300;
-    $("body").animate({
-      scrollTop: posicaoPlacar + "px"
-    },1000);
+    alert(posicaoPlacar);
+    //posicaoPlacar = posicaoPlacar + 300;
+    // $("body").animate({
+    //   scrollTop:  "1600px"
+    // });
+    $("body").scrollTop(posicaoPlacar);
 }
 
 function novaLinha(usuario, palavras) {
@@ -58,7 +60,4 @@ function removeLinha() {
     }, 1000);
 }
 
-$(function(){
-    initPlacar();
- });
  

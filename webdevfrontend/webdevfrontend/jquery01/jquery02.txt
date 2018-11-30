@@ -78,3 +78,34 @@ Para que a remoção seja feito só depois do efeito de fadeOut ter terminado, e
     $this.fadeOut(function() {
         $this.remove();
     })
+
+
+O que queremos fazer aqui é disponibilizar algumas frases em um servidor
+via Ajax de forma assincrona 
+function fraseAleatoria() {
+    $.get("http://localhost:3000/frases");
+}
+pasando dados para uma funcao tratar
+function fraseAleatoria() {
+    $.get("http://localhost:3000/frases", trocaFraseAleatoria);
+}
+function trocaFraseAleatoria(data) {
+}
+function trocaFraseAleatoria(data) {
+    var frase = $(".frase");
+    frase.text(data[0].texto);
+
+
+}
+
+var numeroAleatorio = Math.floor(Math.random() * data.length);
+Como fazer uma requisição AJAX com jQuery
+Buscando dados com AJAX
+Como gerar um número aleatório no Javascript
+Como está estruturado a url /frases
+A buscar uma frase aleatória com AJAX
+
+servidor web rodando localmente em sua máquina.
+O Node.js é um ambiente JavaScript multiplataforma disponível para Linux, Mac e Windows
+
+Baixe o instalador clicando no grande botão install diretamente da página do Node.js. Durante a instalação, você apenas clicará botões para continuar o assistente. Não troque a pasta padrão do Node.js durante a instalação a não ser que você saiba exatamente o que está fazendo

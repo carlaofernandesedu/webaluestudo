@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste Scroll Top</title>
+    <style>
+            div.demo {
+              background: #ccc none repeat scroll 0 0;
+              border: 3px solid #666;
+              margin: 5px;
+              padding: 5px;
+              position: relative;
+              width: 200px;
+              height: 100px;
+              overflow: auto;
+            }
+            p {
+              margin: 10px;
+              padding: 5px;
+              border: 2px solid #666;
+              width: 1000px;
+              height: 1000px;
+            }
+    </style>
+</head>
+<body>
+        <div class="demo"><h1>lalala</h1><p>Hello</p></div>
+        <script src="js/jquery.js"></script>
+        <script>
+            $(".demo").scrollTop(500);
+        </script>
+</body>
+</html>

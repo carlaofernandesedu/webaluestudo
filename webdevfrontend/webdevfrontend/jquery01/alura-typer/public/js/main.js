@@ -20,12 +20,6 @@ function bindControleInicializaCronometro()
     $(".campo-digitacao").one("focus",inicializaCronometro);
 }
 
-function atualizaTamanhoFrase() {
-    var frase = $(".frase").text();
-    var numPalavras  = frase.split(" ").length;
-    var tamanhoFrase = $("#tamanho-frase");
-    tamanhoFrase.text(numPalavras);
-}
 
 function inicializaContadores() {
     var conteudo = $(".campo-digitacao").val();
@@ -83,6 +77,13 @@ function reiniciaJogo() {
     campo.removeClass("borda-verde");
 }
 
+function atualizaTempoInicial(tempo) {
+    $("#tempo-digitacao").text(tempo);
+    tempoInicial =tempo;
+}
+
 $(function() {
     init();
-    });
+    initFrase();
+    initPlacar();
+ });
