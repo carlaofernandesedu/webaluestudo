@@ -4,6 +4,7 @@ var tempoInicial = $("#tempo-digitacao").text();
 function init()
 {
     atualizaTamanhoFrase();
+    exibePlacarAtualizado();
     bindControlesPrincipais();
 }
 

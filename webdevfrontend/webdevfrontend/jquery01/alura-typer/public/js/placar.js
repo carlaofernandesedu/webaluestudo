@@ -1,4 +1,4 @@
-var urlExibePlacar = "http:localhost:3000"
+var urlPlacar = "http://localhost:3000/placar"
 
 function initPlacar()
 {
@@ -19,14 +19,14 @@ function sincronizaPlacar() {
        placar.push(score);
     });
     var paramEnvio = {placar: placar};
-    $.post("http://localhost:3000/placar", paramEnvio, function(){
+    $.post(urlPlacar, paramEnvio, function(){
         exibePlacarAtualizado();
     });    
 }
 
 function exibePlacarAtualizado()
 {
-    $.get(urlExibePlacar,function(data){
+    $.get(urlPlacar,function(data){
       $(data).each(
           function(){
             var corpoTabela = $(".placar").find("tbody");
