@@ -11,7 +11,10 @@
     <div class="container">
         <h1 class="center">Alura Typer</h1>
         <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+        <div class="center">
+            <img src="img/spinner.gif" alt="Spinner" id="spinner">
+            <p id="erro">Ocorreu um erro, por favor tente novamente!</p>
+        </div>
         <ul class="informacoes center">
             <li>
                 <i class="small material-icons icones">description</i>
@@ -35,6 +38,10 @@
             <a id="botao-frase" class="btn-floating btn-large waves-effect waves-light blue">
                 <i class="material-icons">shuffle</i>
             </a>
+            <a id="botao-frase-id" class="btn-floating btn-large waves-effect waves-light cyan">
+                    <i class="material-icons">repeat_one</i>
+            </a>
+            <input type="number" name="fraseid" min="0" id="fraseid">
         </div>
 
         <ul class="center">
@@ -60,7 +67,8 @@
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/frase.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/placar.js"></script>
+    <script src="js/main.js"></script>
+
  </body>
 </html>

@@ -1,3 +1,6 @@
+
+var urlObterFrases = "http://localhost:3000/frases";
+
 function initFrase()
 {
     bindControlesFrase();
@@ -6,11 +9,25 @@ function initFrase()
 function bindControlesFrase()
 {
    $("#botao-frase").on("click",obtemFrases);
+   $("#botao-frase-id").on("click",obtemFrasePorCodigo);
 }
 
 function obtemFrases()
 {
-    $.get("http://localhost:3000/frases",trocaFraseAleatoria);
+    trataVisibilidadeImagemExecutandoAcaoObtemFrase();
+    $.get(urlObterFrases,trocaFraseAleatoria)
+    .fail(trataErroObtemFrase)
+    .always(trataVisibilidadeImagemExecutandoAcaoObtemFrase);
+}
+
+function obtemFrasePorCodigo()
+{
+    var fraseId = $("#fraseid").val();
+    var paramEnvio = {id: fraseId}
+    trataVisibilidadeImagemExecutandoAcaoObtemFrase();
+    $.get(urlObterFrases, paramEnvio, trocaFrasePorCodigo)
+    .fail(trataErroObtemFrase)
+    .always(trataVisibilidadeImagemExecutandoAcaoObtemFrase);
 }
 
 function trocaFraseAleatoria(data)
@@ -20,6 +37,26 @@ function trocaFraseAleatoria(data)
     $(".frase").text(item.texto);
     atualizaTamanhoFrase();
     atualizaTempoInicial(item.tempo);
+}
+
+function trocaFrasePorCodigo(data)
+{
+    $(".frase").text(data.texto);
+    atualizaTamanhoFrase();
+    atualizaTempoInicial(data.tempo);
+}
+
+function trataVisibilidadeImagemExecutandoAcaoObtemFrase()
+{
+    $("#spinner").toggle();
+}
+
+function trataErroObtemFrase()
+{
+    $("#erro").toggle();
+    setTimeout(function(){
+        $("#erro").toggle();
+    },2000);
 }
 
 function atualizaTamanhoFrase() {

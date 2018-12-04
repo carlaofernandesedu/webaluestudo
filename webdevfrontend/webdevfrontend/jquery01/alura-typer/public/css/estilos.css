@@ -32,3 +32,16 @@
 body{
     overflow:scroll;
 }
+
+#erro{
+    color:red;
+    display:none;
+}
+
+#spinner{
+    display: none;
+}
+
+#fraseid{
+    width: 40px;
+}

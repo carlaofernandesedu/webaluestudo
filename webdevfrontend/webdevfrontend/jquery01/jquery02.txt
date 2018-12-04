@@ -109,3 +109,34 @@ servidor web rodando localmente em sua máquina.
 O Node.js é um ambiente JavaScript multiplataforma disponível para Linux, Mac e Windows
 
 Baixe o instalador clicando no grande botão install diretamente da página do Node.js. Durante a instalação, você apenas clicará botões para continuar o assistente. Não troque a pasta padrão do Node.js durante a instalação a não ser que você saiba exatamente o que está fazendo
+
+
+Tratamento de Erro para requisicao de AJAX 
+ $.get("http://localhost:3000/frases2222", trocaFraseAleatoria) //URL errada para simular um problema
+    .fail(function(){
+        $("#erro").show(); //ao falhar mostra a mensagem de erro
+    });
+
+     $("#erro").toggle();
+        setTimeout(function(){
+            $("#erro").toggle();
+        },1500);
+
+#spinner{
+    display: none;
+}
+$("#spinner").toggle();
+
+.always(function(){ //sempre escondendo o spinner
+        $("#spinner").toggle();
+    });
+    Melhorando a experiência do usuário
+Criando um spinner na aplicação
+A função .always() do jQuery
+
+Passando parametros na requisicao de ajaxa 
+var fraseId = $("#frase-id").val();
+    var dados = {id : fraseId}; //criacao do objeto JS que guarda a id
+
+    //passando objeto como segundo parametro
+    $.get("http://localhost:3000/frases", dados, trocaFrase);
