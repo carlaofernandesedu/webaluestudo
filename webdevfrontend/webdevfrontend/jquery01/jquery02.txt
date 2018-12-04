@@ -140,3 +140,66 @@ var fraseId = $("#frase-id").val();
 
     //passando objeto como segundo parametro
     $.get("http://localhost:3000/frases", dados, trocaFrase);
+
+function sincronizaPlacar(){
+    var placar = [];
+    var linhas = $("tbody>tr");
+
+    linhas.each(function(){
+        var usuario = $(this).find("td:nth-child(1)");
+        var palavras = $(this).find("td:nth-child(2)");
+
+    });
+}
+
+var dados = {
+        placar: placar
+    };
+    $.post("http://localhost:3000/placar", dados, function(){
+    });
+
+A importancia de dominar o CSS quando estamos trabalhando com JS e jQuery
+Utilizando seletores avançados com a função find
+A função $.each() para percorrer um array
+O formato correto de enviar dados com as funções de AJAX
+Enviando dados com a função $.post()
+
+Funcao atualiza placar 
+function atualizaPlacar(){
+    $.get("http://localhost:3000/placar",function(data){
+        data.each(function(){
+
+        });
+    });
+}
+function atualizaPlacar(){
+    $.get("http://localhost:3000/placar",function(data){
+        $(data).each(function(){
+            var linha = novaLinha(this.usuario, this.pontos);
+            $("tbody").append(linha);
+        });
+    });
+}
+
+ $.get("http://localhost:3000/placar",function(data){
+        $(data).each(function(){
+            var linha = novaLinha(this.usuario, this.pontos);
+
+            //modificado aqui
+            linha.find(".botao-remover").click(removeLinha);
+
+            $("tbody").append(linha);
+        });
+    });
+
+
+    var letras = ['a', 'b', 'c'];
+
+$.each(letras, function() {
+
+     console.log(this);
+});
+
+letras.forEach(function(letra) {
+    console.log(letra);
+});

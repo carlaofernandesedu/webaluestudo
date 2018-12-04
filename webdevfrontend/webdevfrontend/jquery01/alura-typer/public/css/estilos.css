@@ -45,3 +45,7 @@ body{
 #fraseid{
     width: 40px;
 }
+
+#botao-sync{
+    float: right;
+}

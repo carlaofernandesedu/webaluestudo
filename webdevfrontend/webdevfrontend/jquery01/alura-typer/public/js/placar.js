@@ -1,3 +1,5 @@
+var urlExibePlacar = "http:localhost:3000"
+
 function initPlacar()
 {
   bindControlesPlacar();
@@ -6,8 +8,36 @@ function initPlacar()
 function bindControlesPlacar()
 {
     $("#botao-placar").click(mostraPlacar);
+    $("#botao-sync").click(sincronizaPlacar);
 }
 
+function sincronizaPlacar() {
+    var placar = [];
+    var itensPlacar = $("tbody>tr");
+    $(itensPlacar).each(function(){
+      var score = { usuario: $(this).find("td:nth-child(1)").text(), pontos: $(this).find("td:nth-child(2)").text() };
+       placar.push(score);
+    });
+    var paramEnvio = {placar: placar};
+    $.post("http://localhost:3000/placar", paramEnvio, function(){
+        exibePlacarAtualizado();
+    });    
+}
+
+function exibePlacarAtualizado()
+{
+    $.get(urlExibePlacar,function(data){
+      $(data).each(
+          function(){
+            var corpoTabela = $(".placar").find("tbody");
+            var numPalavras = this.pontos ;
+            var usuario= this.usuario;
+            var linha = novaLinha(usuario, numPalavras);
+            linha.find(".botao-remover").click(removeLinha);
+            corpoTabela.append(linha);
+          });
+    });
+}
 
 function mostraPlacar() {
     $(".placar").stop().slideToggle(600);
