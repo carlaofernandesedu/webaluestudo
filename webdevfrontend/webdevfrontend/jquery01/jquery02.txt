@@ -203,3 +203,23 @@ $.each(letras, function() {
 letras.forEach(function(letra) {
     console.log(letra);
 });
+
+CROSS same origin 
+ navegador possui uma proteção que é chamada de Same Origin Policy
+
+ CORS - Cross-Origin Resource Sharing
+ permitir ser chamado a partir de outras orignes 
+Ele adiciona no protocolo http as origens que permitem a solicitacao 
+ Access-Control-Allow-Origin: http://localhost:3000, http://192.168.0.83:3000
+
+Configuracao via node para permitir a execucao no servidor de outra origem 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000, http://192.168.0.83:3000");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+cors habilitadno no NODE.JS
+1) Primeiro pare a servidor da pasta alura-typer-servidor-cors.
+
+2) Abra o arquivo express.js dentro da pasta alura-typer-servidor-cors/servidor/config.
