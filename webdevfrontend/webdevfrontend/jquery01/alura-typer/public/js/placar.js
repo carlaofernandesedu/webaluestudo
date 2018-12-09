@@ -21,6 +21,13 @@ function sincronizaPlacar() {
     var paramEnvio = {placar: placar};
     $.post(urlPlacar, paramEnvio, function(){
         exibePlacarAtualizado();
+        $(".tooltip").tooltipster("open").tooltipster("content","Sincronizado com sucesso");
+    }).fail(function(){
+
+    }).always(function(){
+        setTimeout(function(){
+            $(".tooltip").tooltipster("close");}
+        , 1200);
     });    
 }
 
@@ -45,7 +52,7 @@ function mostraPlacar() {
 
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Douglas";
+    var usuario = $("#usuarios").val();
     var numPalavras = $("#contador-palavras").text();
     var linha = novaLinha(usuario, numPalavras);
     linha.find(".botao-remover").click(removeLinha);

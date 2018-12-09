@@ -224,7 +224,14 @@ cors habilitadno no NODE.JS
 
 2) Abra o arquivo express.js dentro da pasta alura-typer-servidor-cors/servidor/config.
 
+
+
 COMPONENTES EXTRAS 
 
 http://kenwheeler.github.io/slick/
 
+No select TAG 
+http://selectize.github.io/selectize.js/
+
+TOOLTIP
+http://iamceege.github.io/tooltipster/

@@ -6,6 +6,8 @@ function init()
     atualizaTamanhoFrase();
     exibePlacarAtualizado();
     bindControlesPrincipais();
+    inicializaSelectize();
+    inicializaToolTipster();
 }
 
 function bindControlesPrincipais()
@@ -57,6 +59,20 @@ function inicializaMarcadores() {
         }
 }
 
+function inicializaSelectize()
+{
+    $("#usuarios").selectize({
+        create: true,
+        sortField: 'text'
+    });
+}
+
+function inicializaToolTipster()
+{
+    $(".tooltip").tooltipster({
+        trigger:"custom"
+    });
+}
 
 function finalizaJogo() {
     var campo = $(".campo-digitacao");
